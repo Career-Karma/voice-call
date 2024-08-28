@@ -1,5 +1,5 @@
 {
-  "name": "@career-karma/voice-call",
+  "name": "@careerkarma/voice-call",
   "version": "0.0.1",
   "description": "Voice Calls for Career Karma API in your web application",
   "main": "dist/index.ts",
