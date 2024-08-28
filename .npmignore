@@ -1,0 +1,15 @@
+src/
+tests/
+
+tsconfig.json
+jest.config.js
+.eslintrc.js
+.prettierrc
+
+node_modules/
+coverage/
+.env
+*.log
+.npmrc
+.vscode/
+.idea/
