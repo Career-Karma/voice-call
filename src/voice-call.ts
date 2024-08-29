@@ -7,8 +7,8 @@ import { CallEventEmitter } from "./events/call-event-emitter";
 import { buildAudioPlayer, destroyAudioPlayer } from "./utils/audio-utils";
 import { subscribeToTracks } from "./utils/track-utils";
 
-const COMPANION_CALL_URL = "https://api.careerkarma.com/rest/v1/call/web";
-const WORKFLOW_CALL_URL = "https://api.careerkarma.com/rest/v2/call/web";
+const COMPANION_CALL_URL = "/rest/v1/call/web";
+const WORKFLOW_CALL_URL = "/rest/v2/call/web";
 
 type VoiceCallOptions = {
   companionId?: string;
@@ -24,11 +24,13 @@ export class VoiceCall extends CallEventEmitter {
   private speakingTimeout: NodeJS.Timeout | null = null;
   private publicKey?: string;
   private token?: string;
+  private baseApiUrl: string;
 
-  constructor(credential?: { publicKey: string; token: string }) {
+  constructor(credential?: { publicKey: string; token: string, baseApiUrl?: string }) {
     super();
     this.publicKey = credential?.publicKey;
     this.token = credential?.token;
+    this.baseApiUrl = credential?.baseApiUrl || "https://api.careerkarma.com";
   }
 
   async start({
@@ -178,7 +180,7 @@ export class VoiceCall extends CallEventEmitter {
   }): Promise<string> {
     const endpoint = companionId ? COMPANION_CALL_URL : WORKFLOW_CALL_URL;
 
-    const response = await fetch(endpoint, {
+    const response = await fetch(`${this.baseApiUrl}${endpoint}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
