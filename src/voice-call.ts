@@ -7,8 +7,8 @@ import { CallEventEmitter } from "./events/call-event-emitter";
 import { buildAudioPlayer, destroyAudioPlayer } from "./utils/audio-utils";
 import { subscribeToTracks } from "./utils/track-utils";
 
-const COMPANION_CALL_URL = "rest/v1/call/web";
-const WORKFLOW_CALL_URL = "rest/v2/call/web";
+const COMPANION_CALL_URL = "/rest/v1/call/web";
+const WORKFLOW_CALL_URL = "/rest/v2/call/web";
 
 type VoiceCallOptions = {
   companionId?: string;
@@ -31,7 +31,7 @@ export class VoiceCall extends CallEventEmitter {
     super();
     this.publicKey = credential?.publicKey;
     this.token = credential?.token;
-    this.baseApiUrl = credential?.baseApiUrl || "https://api.careerkarma.com/";
+    this.baseApiUrl = credential?.baseApiUrl || "https://api.careerkarma.com";
   }
 
   async start({
