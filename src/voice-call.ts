@@ -117,10 +117,10 @@ export class VoiceCall extends CallEventEmitter {
   }
 
   private cleanup() {
+    const callInstance = DailyIframe.getCallInstance();
+    callInstance?.leave();
+    callInstance?.destroy();
     this.started = false;
-    this.call?.destroy();
-    this.call = null;
-    this.speakingTimeout = null;
   }
 
   private cleanupIfExists() {
