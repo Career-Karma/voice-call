@@ -1,6 +1,6 @@
 {
   "name": "@careerkarma/voice-call",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Voice Calls for Career Karma API in your web application",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
