@@ -16,6 +16,7 @@ type VoiceCallOptions = {
   userId?: string;
   variables?: { [key: string]: unknown };
   customCallUrl?: string;
+  metadata?: { [key: string]: unknown };
 };
 
 export class VoiceCall extends CallEventEmitter {
@@ -39,6 +40,7 @@ export class VoiceCall extends CallEventEmitter {
     userId,
     variables,
     customCallUrl,
+    metadata,
   }: VoiceCallOptions): Promise<{ id: string } | null> {
     if (this.started) return null;
     this.started = true;
@@ -51,6 +53,7 @@ export class VoiceCall extends CallEventEmitter {
           workflowId,
           userId,
           variables,
+          metadata
         });
       }
 
@@ -172,11 +175,13 @@ export class VoiceCall extends CallEventEmitter {
     workflowId,
     userId,
     variables,
+    metadata = {},
   }: {
     companionId?: string;
     workflowId?: string;
     userId?: string;
     variables?: { [key: string]: unknown };
+    metadata?: { [key: string]: unknown };
   }): Promise<string> {
     const endpoint = companionId ? COMPANION_CALL_URL : WORKFLOW_CALL_URL;
 
@@ -192,6 +197,7 @@ export class VoiceCall extends CallEventEmitter {
         workflowId,
         externalId: userId,
         variables,
+        metadata,
       }),
     });
 
