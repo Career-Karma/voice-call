@@ -7,7 +7,7 @@ Voice Calls for Career Karma API in your web application
 To install the Career Karma Voice Call SDK via npm, run the following command:
 
 ```shell
-npm install @career-karma/voice-call
+npm install @careerkarma/voice-call
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install @career-karma/voice-call
 Import the Career Karma Web SDK into your project:
 
 ```typescript
-import VoiceCall from "@career-karma/voice-call";
+import VoiceCall from "@careerkarma/voice-call";
 ```
 
 Create a new instance of the Career Karma Voice Call SDK using your public key or token:
@@ -33,10 +33,11 @@ const voiceCall = new VoiceCall({
 Initiate the call with a companion:
 
 ```typescript
-voiceCall.startCall({
+voiceCall.start({
   companionId: string;            // Required
   userId: string;                 // Optional
   variables: Record<string, any>; // Optional
+  metadata: Record<string, any>; // Optional
 });
 ```
 

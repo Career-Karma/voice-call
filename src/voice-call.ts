@@ -31,7 +31,7 @@ export class VoiceCall extends CallEventEmitter {
     super();
     this.publicKey = credential?.publicKey;
     this.token = credential?.token;
-    this.baseApiUrl = credential?.baseApiUrl || "https://api.careerkarma.com";
+    this.baseApiUrl = credential?.baseApiUrl || "https://api.careerkarma.ai";
   }
 
   async start({
