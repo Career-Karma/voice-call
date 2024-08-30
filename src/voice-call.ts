@@ -27,7 +27,11 @@ export class VoiceCall extends CallEventEmitter {
   private token?: string;
   private baseApiUrl: string;
 
-  constructor(credential?: { publicKey: string; token: string, baseApiUrl?: string }) {
+  constructor(credential?: {
+    publicKey: string;
+    token: string;
+    baseApiUrl?: string;
+  }) {
     super();
     this.publicKey = credential?.publicKey;
     this.token = credential?.token;
@@ -53,7 +57,7 @@ export class VoiceCall extends CallEventEmitter {
           workflowId,
           userId,
           variables,
-          metadata
+          metadata,
         });
       }
 
@@ -152,7 +156,7 @@ export class VoiceCall extends CallEventEmitter {
     });
 
     this.call.on("track-started", async (e) => {
-      if (e?.participant && e.track.kind === "audio") {
+      if (e?.participant && e.track.kind === "audio" && !e.participant.local) {
         await buildAudioPlayer(e.track, e.participant.session_id);
       }
 
