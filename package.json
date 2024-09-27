@@ -1,6 +1,6 @@
 {
   "name": "@outrival/voice-call",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Voice Calls for OutRival API in your web application",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/OutRival/voice-call.git"
+    "url": "git+ssh://git@github.com/OutRivalAI/voice-call.git"
   },
   "author": "OutRival, Inc",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/OutRival/voice-call/issues"
+    "url": "https://github.com/OutRivalAI/voice-call/issues"
   },
-  "homepage": "https://github.com/OutRival/voice-call#readme",
+  "homepage": "https://github.com/OutRivalAI/voice-call#readme",
   "dependencies": {
     "@daily-co/daily-js": "^0.70.0",
     "events": "^3.3.0"
