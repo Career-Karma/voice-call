@@ -1,24 +1,24 @@
-# Career Karma Voice Call SDK
+# OutRival Voice Call SDK
 
-Voice Calls for Career Karma API in your web application
+Voice Calls for OutRival API in your web application
 
 ## Installation
 
-To install the Career Karma Voice Call SDK via npm, run the following command:
+To install the OutRival Voice Call SDK via npm, run the following command:
 
 ```shell
-npm install @careerkarma/voice-call
+npm install @outrival/voice-call
 ```
 
 ## Usage
 
-Import the Career Karma Web SDK into your project:
+Import the OutRival Web SDK into your project:
 
 ```typescript
-import VoiceCall from "@careerkarma/voice-call";
+import VoiceCall from "@outrival/voice-call";
 ```
 
-Create a new instance of the Career Karma Voice Call SDK using your public key or token:
+Create a new instance of the OutRival Voice Call SDK using your public key or token:
 
 ```typescript
 const voiceCall = new VoiceCall({
@@ -66,7 +66,7 @@ voiceCall.isMuted();
 
 ## Events
 
-The Career Karma Voice Call SDK provides a set of events that you can listen to:
+The OutRival Voice Call SDK provides a set of events that you can listen to:
 
 ```typescript
 voiceCall.on('speech-start', () => {
