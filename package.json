@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/OutRival/voice-call.git"
+    "url": "git+ssh://git@github.com/OutRivalAi/voice-call.git"
   },
   "author": "OutRival, Inc",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/OutRival/voice-call/issues"
+    "url": "https://github.com/OutRivalAi/voice-call/issues"
   },
-  "homepage": "https://github.com/OutRival/voice-call#readme",
+  "homepage": "https://github.com/OutRivalAi/voice-call#readme",
   "dependencies": {
     "@daily-co/daily-js": "^0.70.0",
     "events": "^3.3.0"
