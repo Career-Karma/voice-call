@@ -1,6 +1,6 @@
 {
   "name": "@outrival/voice-call",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Voice Calls for OutRival API in your web application",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
